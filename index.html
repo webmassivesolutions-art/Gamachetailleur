@@ -14,7 +14,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
-<!-- PostHog tracking script --> <script> !function(t,e){var o=window,p="https://app.posthog.com",n="phc_NeRnpNJoJ9DHqfIpWsvviOVTR7sA14UgmNzo2ZJIcLE",i=t;function r(t){if(o[t])return o[t].api;var e=o[t]={};return o[t].api=function(o,p){e[o]&&e[o].handle&&e[o].handle(p)}}}var a=!0,y="posthog";e.exports={}} </script>
+<!-- PostHog tracking -->
+<script>
+!function(t,e){
+  var o,n,p,r;
+  e.__SV||(window.posthog=e,e._i=[],
+  e.init=function(i,s,a){
+    function g(t,e){
+      var o=e.split(".");
+      if(o.length==2){ t=t[o[0]]; e=o[1]; }
+      t[e]=function(){ t.push([e].concat(Array.prototype.slice.call(arguments,0))); };
+    }
+    (p=t.createElement("script")).type="text/javascript";
+    p.async=!0;
+    p.src="https://app.posthog.com/static/array.js";
+    (r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);
+    var u=e;
+    for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){
+      var e="posthog";
+      return "posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e;
+    },u.people.toString=function(){ return u.toString(1)+".people (stub)" },
+    o="capture identify alias people.set people.set_once reset group set_config".split(" "),
+    n=0;n<o.length;n++)g(u,o[n]);
+    e._i.push([i,s,a]);
+  };
+  e.__SV=1;
+}(document,window.posthog||[]);
+
+posthog.init('phc_NeRnpNJoJ9DHqfIpWsvviOVTR7sA14UgmNzo2ZJIcLE', {
+  api_host: 'https://app.posthog.com'
+});
+</script>
 </head>
 <body>
     
